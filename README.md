@@ -5,24 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caça ao Tesouro do Amor</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffe6e6;
+            color: #333;
             text-align: center;
             padding: 20px;
-            background-color: #f7f7f7;
         }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #ff3366;
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        p, h2 {
+            font-size: 1.2em;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #ff3366;
+            border-radius: 5px;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #ff6699;
+            box-shadow: 0 0 10px #ff6699;
+        }
+
+        button {
+            background-color: #ff3366;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff6699;
+        }
+
+        #ticket {
+            margin-top: 20px;
+            border: 3px dashed #ff3366;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            animation: bounceIn 2s ease-in;
+        }
+
         .hidden {
             display: none;
         }
-        #ticket {
-            margin-top: 20px;
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.8); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
 
-    <h1>Bem-vindo à Caça ao Tesouro do meu amor!</h1>
-    <p>Siga as dicas memoráveis e descubra os locais para chegar à sua surpresa final!</p>
+    <h1>Caça ao Tesouro do Amor</h1>
+    <p>Siga as dicas e reviva momentos especiais até chegar à sua surpresa final!</p>
 
     <div id="game">
         <p id="question"></p>
@@ -32,7 +96,7 @@
 
     <div id="final" class="hidden">
         <h2>Parabéns! Você chegou ao destino final!</h2>
-        <p>Agora siga para a Sala VIP do Cinemark. Estou esperando com uma surpresa especial!</p>
+        <p>Agora siga para a Sala VIP do Cinemark. Estou esperando com uma surpresa especial! ❤️</p>
         <img id="ticket" src="ingresso.png" alt="Ingresso Cinemark" width="300">
         <p>Feliz Aniversário, meu amor! ❤</p>
     </div>
